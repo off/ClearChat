@@ -1,0 +1,9 @@
+name: ClearChat
+author: Glenjendary
+main: com.glenjendary.clearchat.Main
+description: Clears chat for players, but not for staff!
+commands:
+  clearchat:
+    usage: /clearchat
+    description: Clears chat for players
+    aliases: [cc, chatclear, chatc, clearc]
