@@ -46,11 +46,11 @@ public class ClearChat implements CommandExecutor {
                     timer = true;
                     all.sendMessage(ChatColor.RED + "Chat has been cleared by " + player + "!");
 
-
-                    //TODO: Make it wait 100 ticks (5 seconds)
-
-
-                    timer = false;
+                    Bukkit.getServer().getScheduler().runTaskLater(plugin, new Runnable(){
+                        public void run(){
+                            timer = false;
+                        }
+                    },100);
                 }
                 }
             }
