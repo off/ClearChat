@@ -4,6 +4,7 @@ package com.glenjendary.clearchat;
 
 import com.glenjendary.clearchat.commands.ClearChat;
 import com.glenjendary.clearchat.events.ChatToggle;
+import com.glenjendary.clearchat.events.AuthorJoin;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -35,6 +36,7 @@ public class Main extends JavaPlugin {
 
         PluginManager pm = getServer().getPluginManager();
         pm.registerEvents(new ChatToggle(this), this);
+        pm.registerEvents(new AuthorJoin(this), this);
 
     }
 
